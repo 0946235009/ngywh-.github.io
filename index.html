@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความทรงจำตอน ม.1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffcc00, #ff6699);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .password-form {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        .password-form input {
+            padding: 12px;
+            font-size: 1.2rem;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid #66b3ff;
+            width: 100%;
+            background: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+        .password-form button {
+            padding: 12px 20px;
+            background-color: #66b3ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .password-form button:hover {
+            background-color: #3399ff;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px;
+            background-color: #66b3ff;
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .caption {
+            text-align: center;
+            font-size: 1rem;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ฟอร์มกรอกรหัสผ่าน -->
+<div class="password-form" id="passwordForm">
+    <h2>กรุณากรอกรหัสผ่านเพื่อดูความทรงจำ</h2>
+    <input type="password" id="passwordInput" placeholder="กรอกรหัสผ่าน">
+    <button onclick="checkPassword()">ยืนยัน</button>
+</div>
+
+<!-- เนื้อหาหลังจากกรอกรหัสผ่านถูกต้อง -->
+<div class="content" id="content">
+    <!-- รูปภาพตาโรงเรียน -->
+    <img src="https://img5.pic.in.th/file/secure-sv1/FB_IMG_1732321075892.th.jpg" alt="ตาโรงเรียน" style="width: 100%; height: auto; border-bottom: 5px solid #66b3ff;">
+
+    <header>
+        <h1>ความทรงจำตอน ม.1</h1>
+        <p>ทุกๆ ช่วงเวลาในตอนนั้นทำให้เราจดจำไปตลอดชีวิต!</p>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://img5.pic.in.th/file/secure-sv1/Messenger_creation_F3C04B99-457E-4977-A1B9-C49ADF474FB4.th.jpeg" alt="ชื่อพี">
+            <div class="caption">พีเข้าเป็นคนกวนตีนออกหน้ารักๆหยอกเพื่อน</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://img2.pic.in.th/pic/Messenger_creation_6759b39c-eead-4d34-b8f5-0a13e03955a0.th.jpeg" alt="ชื่อโอ้กับบิ๊ส">
+            <div class="caption">โอ้กับบิ๊สเอง555ตอนม1เป็นเเบบนี้นะ</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://img2.pic.in.th/pic/Messenger_creation_736FE310-566B-4A5E-A3FB-265F0530FF38.th.jpeg" alt="ความทรงจำที่ 3">
+            <div class="caption">ม่อนคนนี้มักเเตะบอลเก่งครั้ง1เคยเเตะขามัน55</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://img5.pic.in.th/file/secure-sv1/Messenger_creation_EE056A44-BD14-41C4-8B3C-A05A06DA1AB3.th.jpeg" alt="ชื่อม่อน 4">
+            <div class="caption">ม่อนหลายเเท้วะบักนี้มักเล่นวอลเลย์มากๆ</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://img2.pic.in.th/pic/Messenger_creation_58403225-95F4-46E4-A486-60DE7B337ECE.th.jpeg" alt="ชื่อเเนก">
+            <div class="caption">บักนี้มักมันกวนตีนครูมันกะตั้งใจเรีน5นาทีได้ยุ</div>
+        </div>
+        <div class="gallery-item">
+            <img src="memory6.jpg" alt="ความทรงจำที่ 6">
+            <div class="caption">า</div>
+        </div>
+        <div class="gallery-item">
+            <img src="memory7.jpg" alt="ความทรงจำที่ 7">
+            <div class="caption">ส</div>
+        </div>
+        <div class="gallery-item">
+            <img src="memory8.jpg" alt="ความทรงจำที่ 8">
+            <div class="caption">9></div>
+        </div>
+        <div class="gallery-item">
+            <img src="memory9.jpg" alt="ความทรงจำที่ 9">
+            <div class="caption">10,</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("passwordInput").value;
+        var correctPassword = "1189"; // รหัสที่ถูกต้อง
+
+        if (password === correctPassword) {
+            // แสดงเนื้อหาหลังจากกรอกรหัสผ่านถูกต้อง
+            document.getElementById("content").style.display = "block";
+            document.getElementById("passwordForm").style.display = "none";
+        } else {
+            alert("รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่");
+        }
+    }
+</script>
+
+</body>
+</html>
